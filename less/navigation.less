@@ -1,1 +1,46 @@
 // Navigation Styles here
+nav {
+    margin-top: 1%;
+    .displayFlex(space-evenly, center);
+    font-size: 1.5rem;
+     
+    @media @mobile {
+        .mobileFlex(center, center);                     
+     }// this closes media query for nav     
+    
+.logo {
+        
+    @media @mobile {
+        .mobileFlex(center, center);            
+     }// this closes media query for .logo    
+}//this closes logo   
+
+.nav-bar {
+     width: 24%;
+    .displayFlex(space-evenly, center);
+    padding: 1%;
+    
+
+@media @mobile {
+    display:flex;
+    justify-content: space-between;
+    width: 80%;
+}//this closes media query for .nav-bar    
+
+a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#000;
+    padding:2%;
+@media @mobile {
+    padding:1%;
+}    
+    
+&:hover {
+   background-color:@eastern-blue;
+   color:@white;
+       
+}//this closes hover for a tag    
+}//this closees a tag inside .nav-bar    
+}//this closes .navbar div inside nav tag
+}//this closes nav
