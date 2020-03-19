@@ -1,1 +1,34 @@
 // Mixins in here
+
+.displayFlex(@justify, @align){
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.mobileFlex (@justify, @align){
+    display: flex;
+    flex-direction: column;
+    justify-content: @justify;
+    align-items: @align;
+    margin-top: 1%;
+    
+}
+
+
+.buttonStyle (@bg-color, @text-color, @justify, @align, @padding, @font-size){
+    background-color: @bg-color;
+    color:@text-color;
+    padding:@padding;
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+    width:80%;
+    font-size: @font-size;
+    border-radius:25px;
+}
+
+.mobileButton(){
+    width: 94%;
+    padding: 3%;
+}

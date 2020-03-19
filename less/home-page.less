@@ -1,3 +1,49 @@
+  header {
+    margin: 0;   
+   
+   
+
+  hr {
+    margin-bottom:0;
+    text-decoration: none;
+    border-bottom: 2px dashed @navigation-border;
+    border-top: 0px dashed @navigation-border;
+
+  }//this closes hr tag  
+  .stretch-image {
+    width: 57%;
+    margin: 0 auto; 
+    
+  @media @mobile {
+    width: 90%;      
+    }//this closes media for header    
+
+  }//this closes div inside the header  
+  .header-intro {
+    width: 57%;
+    margin:0 auto;
+  @media @mobile {
+    width: 100%;
+
+  }//this closes media query for .header-intro  
+  h1 {
+    margin-top: 2%; 
+    
+    @media @mobile {
+      margin-left:3%;
+    }//this closes media for h1 tag inside .header-intro
+         
+    }//this closes h1  
+   p{
+  @media @mobile {
+    margin-left:3%;
+  }//this closes media for p tag inside . header-intro   
+    
+   }//this closes p tag inside .header-intro 
+   }// this closes .header-intro
+  }//header ends here
+
+
 .home {
 
   .content-section {
@@ -6,19 +52,43 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+  @media @mobile {
+    .mobileFlex(center, center);
+    width: 100%;
+    
+    
+  }//this closes media query for  
+
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      margin-top: 5%;
+
+      @media @mobile {
+       width: 94%;    
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
       img {
         border-radius: 10px;
+
+      @media @mobile {
+       width: 95%;
+      }  
+
+       
       }
     }
   }
@@ -26,6 +96,11 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -42,8 +117,12 @@
     width: 75%;
     margin: 0 auto 30px;
 
+  @media @mobile {
+    width:94%;
+  }  
     img {
       border-radius: 10px;
+      
     }
   }
 
@@ -53,9 +132,27 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      .mobileFlex(center, center);
+      
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+    @media @mobile {
+      width:94%;
+    }  
+      
+    
+    .btn {
+      .buttonStyle(@eastern-blue, #fff, center, center, 7%, 1.5rem);      
+     
+    @media @mobile {
+      .mobileButton();
+    }  
+    }//.btn closes here  
     }
   }
 }// home
